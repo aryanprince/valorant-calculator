@@ -1,5 +1,3 @@
-//requiredVP 67
-
 function process() {
     var requiredVP = document.getElementById("requiredVP").value;
     if (requiredVP >= 0 && requiredVP <= 999999) {
@@ -34,4 +32,17 @@ function calculate(requiredVP) {
     document.getElementById("vp3650").value = vp3650;
     document.getElementById("vp5350").value = vp5350;
     document.getElementById("vp11000").value = vp11000;
+
+    if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "usd") {
+        document.getElementById("cost").value = vp475 * 5 + vp1000 * 10 + vp2050 * 20 + vp3650 * 35 + vp5350 * 50 + vp11000 * 100;
+    }
+    if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "gbp") {
+        document.getElementById("cost").value = vp475 * 4.5 + vp1000 * 9 + vp2050 * 18 + vp3650 * 30 + vp5350 * 45 + vp11000 * 90;
+    }
+    if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "inr") {
+        document.getElementById("cost").value = vp475 * 399 + vp1000 * 799 + vp2050 * 1599 + vp3650 * 2699 + vp5350 * 3999 + vp11000 * 7900;
+    }
+    if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "gbp") {
+        document.getElementById("cost").value = vp475 * (5 * 3.64) + vp1000 * (10 * 3.64) + vp2050 * (20 * 3.64) + vp3650 * (35 * 3.64) + vp5350 * (50 * 3.64) + vp11000 * (100 * 3.64);
+    }
 }
