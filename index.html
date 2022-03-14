@@ -1,62 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link href="style.css" rel="stylesheet" />
-
-    <title>Valorant Calculator</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="input-group m-5 mb-3">
-          <span class="input-group-text" id="basic-addon1"
-            >Points you have</span
-          >
-          <input
-            type="text"
-            class="form-control"
-            placeholder="0 VP"
-            aria-label="current-points"
-            aria-describedby="basic-addon1"
-          />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <title>Valo Calc</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="cf">
+                    <label for="celsius">Needed VP</label>
+                    <input type="number" id="needed" />
+                </div>
+                <div class="cf">
+                    <label for="celsius">Cost ($)</label>
+                    <input type="number" id="cost" />
+                </div>
+                <div class="row p-3 m-auto">
+                    <button type="button" class="btn btn-primary" id="calculate" onclick="myFunction()">Calculate</button>
+                </div>
+            </div>
         </div>
-        <div class="input-group m-5 mt-0">
-          <span class="input-group-text" id="basic-addon1"
-            >Points you need</span
-          >
-          <input
-            type="text"
-            class="form-control"
-            placeholder="1000 VP"
-            aria-label="current-points"
-            aria-describedby="basic-addon1"
-          />
-        </div>
-      </div>
-      <div class="text-center">
-        <button type="button" class="btn btn-primary" id="calc">
-          Calculate
-        </button>
-      </div>
-    </div>
-
-    <script>
-      var button = document.getElementById("calc");
-
-      function myFunction() {
-        document.getElementById("calc").innerHTML = "Paragraph changed.";
-      }
-    </script>
-  </body>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
 </html>
