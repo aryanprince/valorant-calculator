@@ -10,7 +10,7 @@
 
 body {
     height: 100vh;
-    background-color: #23272a;
+    background-color: #23272A;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,4 +46,21 @@ input {
 
 input:focus {
     border-color: #5865f2;
+}
+
+button {
+    background-color: #5865f2; /* Green */
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.2s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #23272A;
 }
