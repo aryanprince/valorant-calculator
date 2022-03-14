@@ -12,48 +12,14 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
 
-    <title>VAL!</title>
+    <title>Valorant Calculator</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="playstation.svg" alt="" width="30" height="24" />
-        </a>
-      </div>
-
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <br /><br /><br /><br /><br />
-
     <div class="container">
       <div class="row">
-        <div class="input-group mb-3">
+        <div class="input-group m-5 mb-3">
           <span class="input-group-text" id="basic-addon1"
             >Points you have</span
           >
@@ -65,8 +31,7 @@
             aria-describedby="basic-addon1"
           />
         </div>
-
-        <div class="input-group mb-3">
+        <div class="input-group m-5 mt-0">
           <span class="input-group-text" id="basic-addon1"
             >Points you need</span
           >
@@ -79,10 +44,19 @@
           />
         </div>
       </div>
-
       <div class="text-center">
-        <button type="button" class="btn btn-primary">Calculate</button>
+        <button type="button" class="btn btn-primary" id="calc">
+          Calculate
+        </button>
       </div>
     </div>
+
+    <script>
+      var button = document.getElementById("calc");
+
+      function myFunction() {
+        document.getElementById("calc").innerHTML = "Paragraph changed.";
+      }
+    </script>
   </body>
 </html>
