@@ -27,6 +27,10 @@ body {
 }
 
 .cf {
+    width: 33%;
+}
+
+.cl {
     width: 50%;
 }
 
@@ -42,8 +46,4 @@ input {
 
 input:focus {
     border-color: #5865f2;
-}
-
-button {
-    color: #5865f2;
 }

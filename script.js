@@ -1,5 +1,8 @@
 function process() {
-    var requiredVP = document.getElementById("requiredVP").value;
+    var cur = document.getElementById("currentVP").value;
+    var req = document.getElementById("requiredVP").value;
+    var requiredVP = req - cur;
+
     if (requiredVP >= 0 && requiredVP <= 999999) {
         calculate(requiredVP);
     } else {
@@ -34,15 +37,16 @@ function calculate(requiredVP) {
     document.getElementById("vp11000").value = vp11000;
 
     if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "usd") {
-        document.getElementById("cost").value = vp475 * 5 + vp1000 * 10 + vp2050 * 20 + vp3650 * 35 + vp5350 * 50 + vp11000 * 100;
+        document.getElementById("cost").value = "$ " + (vp475 * 5 + vp1000 * 10 + vp2050 * 20 + vp3650 * 35 + vp5350 * 50 + vp11000 * 100);
     }
     if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "gbp") {
-        document.getElementById("cost").value = vp475 * 4.5 + vp1000 * 9 + vp2050 * 18 + vp3650 * 30 + vp5350 * 45 + vp11000 * 90;
+        document.getElementById("cost").value = "£ " + (vp475 * 4.5 + vp1000 * 9 + vp2050 * 18 + vp3650 * 30 + vp5350 * 45 + vp11000 * 90);
     }
     if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "inr") {
-        document.getElementById("cost").value = vp475 * 399 + vp1000 * 799 + vp2050 * 1599 + vp3650 * 2699 + vp5350 * 3999 + vp11000 * 7900;
+        document.getElementById("cost").value = "₹ " + (vp475 * 399 + vp1000 * 799 + vp2050 * 1599 + vp3650 * 2699 + vp5350 * 3999 + vp11000 * 7900);
     }
-    if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "gbp") {
-        document.getElementById("cost").value = vp475 * (5 * 3.64) + vp1000 * (10 * 3.64) + vp2050 * (20 * 3.64) + vp3650 * (35 * 3.64) + vp5350 * (50 * 3.64) + vp11000 * (100 * 3.64);
+    if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "qar") {
+        document.getElementById("cost").value = "QR " + ((vp475 * 5 + vp1000 * 10 + vp2050 * 20 + vp3650 * 35 + vp5350 * 50 + vp11000 * 100) * 3.64).toFixed(2);
     }
 }
+
