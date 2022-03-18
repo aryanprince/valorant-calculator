@@ -7,12 +7,6 @@ function process() {
         calculate(requiredVP);
     } else {
         alert("Please enter a number less than 1 million");
-        document.getElementById("vp475").value = "";
-        document.getElementById("vp1000").value = "";
-        document.getElementById("vp2050").value = "";
-        document.getElementById("vp2050").value = "";
-        document.getElementById("vp5350").value = "";
-        document.getElementById("vp11000").value = "";
     }
 }
 
@@ -29,12 +23,12 @@ function calculate(requiredVP) {
     requiredVP = requiredVP % 1000;
     var vp475 = parseInt(requiredVP / 475);
 
-    document.getElementById("vp475").value = vp475;
-    document.getElementById("vp1000").value = vp1000;
-    document.getElementById("vp2050").value = vp2050;
-    document.getElementById("vp3650").value = vp3650;
-    document.getElementById("vp5350").value = vp5350;
-    document.getElementById("vp11000").value = vp11000;
+    var noofvp475 = vp475;
+    var noofvp1000 = vp1000;
+    var noofvp2050 = vp2050;
+    var noofvp3650 = vp3650;
+    var noofvp5350 = vp5350;
+    var noofvp11000 = vp11000;
 
     if (document.getElementById("currency").options[document.getElementById("currency").selectedIndex].value == "usd") {
         document.getElementById("cost").value = "$ " + (vp475 * 5 + vp1000 * 10 + vp2050 * 20 + vp3650 * 35 + vp5350 * 50 + vp11000 * 100);
@@ -49,4 +43,3 @@ function calculate(requiredVP) {
         document.getElementById("cost").value = "QR " + ((vp475 * 5 + vp1000 * 10 + vp2050 * 20 + vp3650 * 35 + vp5350 * 50 + vp11000 * 100) * 3.64).toFixed(2);
     }
 }
-
