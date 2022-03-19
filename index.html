@@ -11,11 +11,11 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div class="container p-5 p-md-0">
+        <div class="container p-4 p-md-0">
             <div class="row g-3  m-md-5">
                 <div class="col-12 pb-4">
                     <h1 style="color: #5865f2">ValoCalc</h1>
-                    <p>Use this to find out how much more money you have to waste on this useless game.</p>
+                    <h6>Use this to find out how much more money you have to waste on this useless game.</h6>
                 </div>
 
                 <div class="col-md-6 px-5">
@@ -28,7 +28,7 @@
                     <input type="text" class="form-control" id="requiredVP" />
                 </div>
 
-                <div class="col-12 px-4 pt-5 pb-4 text-center">
+                <div class="col-12 px-4 pt-5 pb-5 text-center">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="calculate" onclick="process() ">Calculate</button>
                 </div>
 
@@ -47,7 +47,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="cf pt-4 mx-auto">
+            </form>
+            <footer>
+                <div class="col pt-5 mx-auto">
                     <label>Cost in</label>
                     <select name="currency" id="currency">
                         <option value="USD">USD</option>
@@ -56,7 +58,7 @@
                         <option value="QAR">QAR</option>
                     </select>
                 </div>
-            </form>
+            </footer>
         </div>
 
         <script src="script.js"></script>
